@@ -35,6 +35,7 @@
                                 <state key="normal" image="scissors"/>
                                 <connections>
                                     <action selector="userTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PpV-Ol-yIc"/>
+                                    <segue destination="gBk-HK-GxC" kind="presentation" identifier="scissorsChoice" id="7Ys-05-z1x"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="rockButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-z1-rCl">
@@ -65,7 +66,7 @@
                         <outlet property="paper" destination="iWP-cp-RjG" id="cAw-FE-P4h"/>
                         <outlet property="rock" destination="bTb-z1-rCl" id="x8L-h9-g2B"/>
                         <outlet property="scissors" destination="xTw-Xg-xwt" id="ger-jm-o1U"/>
-                        <segue destination="gBk-HK-GxC" kind="presentation" identifier="scissorsChoice" id="7Ax-Oq-EG7"/>
+                        <segue destination="gBk-HK-GxC" kind="presentation" identifier="paperChoice" id="7Ax-Oq-EG7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -120,4 +121,7 @@
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7Ys-05-z1x"/>
+    </inferredMetricsTieBreakers>
 </document>

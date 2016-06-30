@@ -25,11 +25,13 @@ class ViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("in add data section", sender)
+        let controller = segue.destinationViewController as! OutcomeViewController
+        controller.computerTurn = genComputerTurn()
+        if segue.identifier == "paperChoice" {
+            controller.userTurn = 2
+        }
         if segue.identifier == "scissorsChoice" {
-            var controller = segue.destinationViewController as! OutcomeViewController
-//            controller.userTurn = sender.tag
-            controller.computerTurn = genComputerTurn()
+            controller.userTurn = 3
         }
     }
     
