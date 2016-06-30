@@ -16,14 +16,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("loading .....")
-        let a = genComputerTurn()
-        print("user turn", a)
         rock.tag = 1
         paper.tag = 2
-        scissors.tag = 3
+//        scissors.tag = 3
     }
-    
+
+//    way to pass data for the non-manual segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let controller = segue.destinationViewController as! OutcomeViewController
         controller.computerTurn = genComputerTurn()
@@ -35,19 +33,18 @@ class ViewController: UIViewController {
         }
     }
     
+//    generate a number to relate the the turn of the computer
     func genComputerTurn () -> Int {
         let randomNumber = 1 + arc4random() % 3;
         return Int(randomNumber)
     }
     
+//    manual segue
     @IBAction func userTurn(sender: AnyObject) {
-        print("clicked", sender)
         if sender.tag == 2 {
-            print("scissors chosen")
             performSegueWithIdentifier("scissorsChoice", sender: self)
         }
         if sender.tag == 1 {
-            print("rock chosen")
             var controllerCode:OutcomeViewController
             controllerCode = storyboard?.instantiateViewControllerWithIdentifier("OutcomeViewController") as! OutcomeViewController
             controllerCode.userTurn = sender.tag

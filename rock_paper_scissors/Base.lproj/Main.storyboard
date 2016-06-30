@@ -91,20 +91,16 @@
                                     <action selector="playAgain:" destination="gBk-HK-GxC" eventType="touchUpInside" id="6Jf-sp-10O"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9st-LF-T9N">
-                                <rect key="frame" x="180" y="146" width="240" height="308"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="mht-fc-qub"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9st-LF-T9N">
+                                <rect key="frame" x="180" y="164" width="240" height="198"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pwS-wp-iXS" firstAttribute="centerX" secondItem="khQ-8o-68r" secondAttribute="centerX" id="1OC-2f-qqr"/>
-                            <constraint firstItem="9st-LF-T9N" firstAttribute="centerX" secondItem="khQ-8o-68r" secondAttribute="centerX" id="SJN-A4-c9G"/>
-                            <constraint firstItem="9st-LF-T9N" firstAttribute="centerY" secondItem="khQ-8o-68r" secondAttribute="centerY" id="TcK-Ba-KIt"/>
-                            <constraint firstItem="9st-LF-T9N" firstAttribute="top" secondItem="bfZ-fl-K1V" secondAttribute="bottom" constant="126" id="YzP-Mk-qan"/>
                             <constraint firstItem="pdN-5e-amM" firstAttribute="top" secondItem="pwS-wp-iXS" secondAttribute="bottom" constant="65" id="eUa-CB-8le"/>
+                            <constraint firstItem="9st-LF-T9N" firstAttribute="centerY" secondItem="khQ-8o-68r" secondAttribute="centerY" constant="-50" id="gRs-lQ-l1D"/>
+                            <constraint firstItem="9st-LF-T9N" firstAttribute="centerX" secondItem="khQ-8o-68r" secondAttribute="centerX" id="zWZ-Th-LN9"/>
                         </constraints>
                     </view>
                     <connections>
