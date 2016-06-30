@@ -17,8 +17,6 @@ class OutcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("reached the second view controller!", userTurn, computerTurn)
-//        pass the choices to find out who won
 //        unwrap the optional values else do not show anything!
         if let computerGo = computerTurn {
             if let userGo = userTurn {
@@ -28,11 +26,17 @@ class OutcomeViewController: UIViewController {
         } else {
            resultsImage.image = nil
         }
+        resultsImage.alpha = 0
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(0.8) {
+            self.resultsImage.alpha = 1
+        }
     }
     
     //    function that gets passed the computersa and users go and then returns who appropriate image reference - trigger on load?
     func findWhoWon (computer: Int, user: Int) -> String {
-        print("find who won function", computer, user)
         if computer == user {
 //            then it is a draw
             return "draw"
