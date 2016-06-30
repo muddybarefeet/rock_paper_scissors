@@ -23,22 +23,31 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-cp-RjG">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="paperButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-cp-RjG">
                                 <rect key="frame" x="261" y="199" width="75" height="65"/>
                                 <state key="normal" image="paper"/>
+                                <connections>
+                                    <action selector="userTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="azo-lA-zK8"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTw-Xg-xwt">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="scissorsButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTw-Xg-xwt">
                                 <rect key="frame" x="394" y="199" width="75" height="65"/>
                                 <state key="normal" image="scissors"/>
+                                <connections>
+                                    <action selector="userTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PpV-Ol-yIc"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-z1-rCl">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="rockButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-z1-rCl">
                                 <rect key="frame" x="132" y="199" width="75" height="65"/>
                                 <state key="normal" image="rock"/>
+                                <connections>
+                                    <action selector="userTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNR-Fl-I0b"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.94302138067029162" blue="0.62240714713012357" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="iWP-cp-RjG" firstAttribute="leading" secondItem="bTb-z1-rCl" secondAttribute="trailing" constant="20" id="0s9-n7-axM"/>
+                            <constraint firstItem="iWP-cp-RjG" firstAttribute="leading" secondItem="bTb-z1-rCl" secondAttribute="trailing" constant="5" id="0s9-n7-axM"/>
                             <constraint firstItem="iWP-cp-RjG" firstAttribute="width" secondItem="bTb-z1-rCl" secondAttribute="width" id="1v5-Dw-gYV"/>
                             <constraint firstItem="iWP-cp-RjG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="2wx-lD-yjo"/>
                             <constraint firstItem="xTw-Xg-xwt" firstAttribute="height" secondItem="bTb-z1-rCl" secondAttribute="height" id="4Gd-lB-sCQ"/>
@@ -47,14 +56,63 @@
                             <constraint firstItem="PBr-lX-bHL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pc5-As-Saq"/>
                             <constraint firstItem="xTw-Xg-xwt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="T7Z-Va-jOg"/>
                             <constraint firstItem="iWP-cp-RjG" firstAttribute="height" secondItem="bTb-z1-rCl" secondAttribute="height" id="dNe-fm-dc8"/>
-                            <constraint firstItem="xTw-Xg-xwt" firstAttribute="leading" secondItem="iWP-cp-RjG" secondAttribute="trailing" constant="20" id="lmM-Tz-ZXp"/>
+                            <constraint firstItem="xTw-Xg-xwt" firstAttribute="leading" secondItem="iWP-cp-RjG" secondAttribute="trailing" constant="5" id="lmM-Tz-ZXp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PBr-lX-bHL" secondAttribute="bottom" constant="81" id="ndV-PG-3YR"/>
                             <constraint firstItem="bTb-z1-rCl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="nzX-HV-Wec"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="paper" destination="iWP-cp-RjG" id="cAw-FE-P4h"/>
+                        <outlet property="rock" destination="bTb-z1-rCl" id="x8L-h9-g2B"/>
+                        <outlet property="scissors" destination="xTw-Xg-xwt" id="ger-jm-o1U"/>
+                        <segue destination="gBk-HK-GxC" kind="presentation" identifier="scissorsChoice" id="7Ax-Oq-EG7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Outcome View Controller-->
+        <scene sceneID="77g-Ks-DNE">
+            <objects>
+                <viewController storyboardIdentifier="OutcomeViewController" id="gBk-HK-GxC" customClass="OutcomeViewController" customModule="rock_paper_scissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bfZ-fl-K1V"/>
+                        <viewControllerLayoutGuide type="bottom" id="pdN-5e-amM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="khQ-8o-68r">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwS-wp-iXS">
+                                <rect key="frame" x="265" y="505" width="71" height="30"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="gBk-HK-GxC" eventType="touchUpInside" id="6Jf-sp-10O"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9st-LF-T9N">
+                                <rect key="frame" x="180" y="146" width="240" height="308"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="mht-fc-qub"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pwS-wp-iXS" firstAttribute="centerX" secondItem="khQ-8o-68r" secondAttribute="centerX" id="1OC-2f-qqr"/>
+                            <constraint firstItem="9st-LF-T9N" firstAttribute="centerX" secondItem="khQ-8o-68r" secondAttribute="centerX" id="SJN-A4-c9G"/>
+                            <constraint firstItem="9st-LF-T9N" firstAttribute="centerY" secondItem="khQ-8o-68r" secondAttribute="centerY" id="TcK-Ba-KIt"/>
+                            <constraint firstItem="9st-LF-T9N" firstAttribute="top" secondItem="bfZ-fl-K1V" secondAttribute="bottom" constant="126" id="YzP-Mk-qan"/>
+                            <constraint firstItem="pdN-5e-amM" firstAttribute="top" secondItem="pwS-wp-iXS" secondAttribute="bottom" constant="65" id="eUa-CB-8le"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultsImage" destination="9st-LF-T9N" id="LvU-i1-6Qp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vfj-TO-k14" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="407"/>
         </scene>
     </scenes>
     <resources>

@@ -12,6 +12,7 @@
 		953FAD8C1D24C2C9005AE602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953FAD8A1D24C2C9005AE602 /* Main.storyboard */; };
 		953FAD8E1D24C2C9005AE602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953FAD8D1D24C2C9005AE602 /* Assets.xcassets */; };
 		953FAD911D24C2CA005AE602 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953FAD8F1D24C2C9005AE602 /* LaunchScreen.storyboard */; };
+		953FADA11D254D56005AE602 /* OutcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953FADA01D254D56005AE602 /* OutcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		953FAD8D1D24C2C9005AE602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		953FAD901D24C2CA005AE602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		953FAD921D24C2CA005AE602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		953FADA01D254D56005AE602 /* OutcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				953FAD861D24C2C9005AE602 /* AppDelegate.swift */,
 				953FAD881D24C2C9005AE602 /* ViewController.swift */,
+				953FADA01D254D56005AE602 /* OutcomeViewController.swift */,
 				953FAD8A1D24C2C9005AE602 /* Main.storyboard */,
 				953FAD8D1D24C2C9005AE602 /* Assets.xcassets */,
 				953FAD8F1D24C2C9005AE602 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953FADA11D254D56005AE602 /* OutcomeViewController.swift in Sources */,
 				953FAD891D24C2C9005AE602 /* ViewController.swift in Sources */,
 				953FAD871D24C2C9005AE602 /* AppDelegate.swift in Sources */,
 			);
@@ -288,6 +292,7 @@
 				953FAD971D24C2CA005AE602 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
