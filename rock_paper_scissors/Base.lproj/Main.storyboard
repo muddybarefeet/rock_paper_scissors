@@ -120,7 +120,6 @@
                     </view>
                     <connections>
                         <outlet property="resultsImage" destination="9st-LF-T9N" id="LvU-i1-6Qp"/>
-                        <outlet property="returnButton" destination="pwS-wp-iXS" id="4i5-fH-7k1"/>
                         <outlet property="whoWonLabel" destination="2wZ-HE-CLn" id="oLm-yT-1qi"/>
                     </connections>
                 </viewController>

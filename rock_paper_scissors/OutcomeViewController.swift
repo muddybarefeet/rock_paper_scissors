@@ -15,7 +15,6 @@ class OutcomeViewController: UIViewController {
     
     @IBOutlet weak var whoWonLabel: UILabel!
     @IBOutlet weak var resultsImage: UIImageView!
-    @IBOutlet weak var returnButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
