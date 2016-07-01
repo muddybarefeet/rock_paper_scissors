@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pick an option!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBr-lX-bHL">
-                                <rect key="frame" x="236" y="498" width="113" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an option!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBr-lX-bHL">
+                                <rect key="frame" x="244" y="498" width="113" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -87,7 +87,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwS-wp-iXS">
                                 <rect key="frame" x="265" y="505" width="71" height="30"/>
-                                <state key="normal" title="Play Again"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="playAgain:" destination="gBk-HK-GxC" eventType="touchUpInside" id="6Jf-sp-10O"/>
                                 </connections>
@@ -98,11 +100,19 @@
                                     <constraint firstAttribute="width" constant="240" id="exe-Hd-14i"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wZ-HE-CLn">
+                                <rect key="frame" x="300" y="491" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.72759085430000003" green="1" blue="0.74210829040000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="pwS-wp-iXS" firstAttribute="centerX" secondItem="khQ-8o-68r" secondAttribute="centerX" id="1OC-2f-qqr"/>
                             <constraint firstItem="9st-LF-T9N" firstAttribute="top" secondItem="bfZ-fl-K1V" secondAttribute="bottom" constant="144" id="E62-Sp-7iK"/>
+                            <constraint firstItem="2wZ-HE-CLn" firstAttribute="centerX" secondItem="khQ-8o-68r" secondAttribute="centerX" id="LxR-Br-LQl"/>
+                            <constraint firstItem="pwS-wp-iXS" firstAttribute="top" secondItem="2wZ-HE-CLn" secondAttribute="bottom" constant="14" id="O6j-4w-uu8"/>
                             <constraint firstItem="pdN-5e-amM" firstAttribute="top" secondItem="pwS-wp-iXS" secondAttribute="bottom" constant="65" id="eUa-CB-8le"/>
                             <constraint firstItem="9st-LF-T9N" firstAttribute="centerY" secondItem="khQ-8o-68r" secondAttribute="centerY" constant="-50" id="gRs-lQ-l1D"/>
                             <constraint firstItem="9st-LF-T9N" firstAttribute="centerX" secondItem="khQ-8o-68r" secondAttribute="centerX" id="zWZ-Th-LN9"/>
@@ -110,6 +120,8 @@
                     </view>
                     <connections>
                         <outlet property="resultsImage" destination="9st-LF-T9N" id="LvU-i1-6Qp"/>
+                        <outlet property="returnButton" destination="pwS-wp-iXS" id="4i5-fH-7k1"/>
+                        <outlet property="whoWonLabel" destination="2wZ-HE-CLn" id="oLm-yT-1qi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vfj-TO-k14" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -13,11 +13,12 @@ class OutcomeViewController: UIViewController {
     var userTurn: Int?
     var computerTurn: Int?
     
+    @IBOutlet weak var whoWonLabel: UILabel!
     @IBOutlet weak var resultsImage: UIImageView!
+    @IBOutlet weak var returnButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("comp,user", computerTurn, userTurn)
 //        unwrap the optional values else do not show anything!
         if let computerGo = computerTurn {
             if let userGo = userTurn {
@@ -27,14 +28,10 @@ class OutcomeViewController: UIViewController {
         } else {
            resultsImage.image = nil
         }
-        resultsImage.alpha = 0
+//        scale image so it fits on landscape
+        resultsImage.contentMode = UIViewContentMode.ScaleAspectFill
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        UIView.animateWithDuration(0.8) {
-            self.resultsImage.alpha = 1
-        }
-    }
+
     
     //    function that gets passed the computersa and users go and then returns who appropriate image reference - trigger on load?
     func findWhoWon (computer: Int, user: Int) -> String {
@@ -43,21 +40,27 @@ class OutcomeViewController: UIViewController {
             return "draw"
         } else if user == 1 && computer == 2 {
 //        user has 1(rock) comp 2(paper) user loose
+            whoWonLabel.text = "You Loose!"
             return "rock-paper"
         } else if user == 1 && computer == 3 {
 //        user 1 rock comp 3 scissors user win
+            whoWonLabel.text = "You Win!"
             return "rock-scissors"
         } else if user == 2 && computer == 1 {
 //        user has 2 paper comp 1 rock user win
+            whoWonLabel.text = "You Win!"
             return "rock-paper"
         } else if user == 3 && computer == 1 {
 //        user 3 scissors comp has 1 rock user loose
+            whoWonLabel.text = "You Loose!"
             return "rock-scissors"
         } else if user == 2 && computer == 3 {
 //            user 2 paper and comp 3 scissors user loose
+            whoWonLabel.text = "You Loose!"
             return "paper-scissors"
         } else {
 //            user 3 scissors and computer 2  paper user win
+            whoWonLabel.text = "You Win!"
             return "paper-scissors"
         }
     }
