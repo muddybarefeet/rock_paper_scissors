@@ -73,15 +73,15 @@
             </objects>
             <point key="canvasLocation" x="158" y="287"/>
         </scene>
-        <!--Outcome View Controller-->
+        <!--OutcomeViewController-->
         <scene sceneID="77g-Ks-DNE">
             <objects>
-                <viewController storyboardIdentifier="OutcomeViewController" id="gBk-HK-GxC" customClass="OutcomeViewController" customModule="rock_paper_scissors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OutcomeViewController" title="OutcomeViewController" id="gBk-HK-GxC" customClass="OutcomeViewController" customModule="rock_paper_scissors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bfZ-fl-K1V"/>
                         <viewControllerLayoutGuide type="bottom" id="pdN-5e-amM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="khQ-8o-68r">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="OutcomeViewController" id="khQ-8o-68r">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
