@@ -17,6 +17,7 @@ class OutcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("comp,user", computerTurn, userTurn)
 //        unwrap the optional values else do not show anything!
         if let computerGo = computerTurn {
             if let userGo = userTurn {
@@ -63,7 +64,6 @@ class OutcomeViewController: UIViewController {
     
 //return to main page to play again
     @IBAction func playAgain(sender: AnyObject) {
-        print("return to main page")
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     

@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var rock: UIButton!
-    @IBOutlet weak var scissors: UIButton!
     @IBOutlet weak var paper: UIButton!
+    @IBOutlet weak var scissors: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +23,14 @@ class ViewController: UIViewController {
 
 //    way to pass data for the non-manual segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("segue.ident", segue.identifier)
         let controller = segue.destinationViewController as! OutcomeViewController
         controller.computerTurn = genComputerTurn()
         if segue.identifier == "paperChoice" {
+            print("paper choice")
             controller.userTurn = 2
-        }
-        if segue.identifier == "scissorsChoice" {
+        } else if segue.identifier == "scissorsChoice" {
+            print("scissor choice")
             controller.userTurn = 3
         }
     }
@@ -42,7 +44,8 @@ class ViewController: UIViewController {
 //    manual segue
     @IBAction func userTurn(sender: AnyObject) {
         if sender.tag == 2 {
-            performSegueWithIdentifier("scissorsChoice", sender: self)
+            print("inuser turn")
+            performSegueWithIdentifier("paperChoice", sender: self)
         }
         if sender.tag == 1 {
             var controllerCode:OutcomeViewController
